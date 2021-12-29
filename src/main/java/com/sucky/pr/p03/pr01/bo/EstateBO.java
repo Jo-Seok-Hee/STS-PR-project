@@ -13,12 +13,19 @@ public class EstateBO {
 	
 	@Autowired
 	private EstateDAO estateDAO;
-	
+	//1-1번
 	public estate getEstate(int id) {
 		return estateDAO.selectEstate(id);
 	}
-	
-	public List<estate> getEstateRent(int rent) {
-		return estateDAO.selectEstateRent(rent);
+	//1-2번
+	public List<estate> getEstateRent(int rP) {
+		return estateDAO.selectEstateRent(rP);
 	}
+	
+	//1-3번
+	public List<estate> getEstateAreaPrice(int area,int price){
+		return estateDAO.selectEstateAreaPrice(area,price);
+	}
+	
+	
 }
