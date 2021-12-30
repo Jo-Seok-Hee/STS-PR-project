@@ -27,5 +27,25 @@ public class EstateBO {
 		return estateDAO.selectEstateAreaPrice(area,price);
 	}
 	
+	//2-1번
+	public int addEstateObject(estate es) {
+		
+		return estateDAO.insertEstateObject(es);
+	}
+	
+	//2-2번
+	public int addEstate(int realtorId,String address,int area, String type, int price, int rentPrice) {
+		return estateDAO.insertEstate(realtorId, address, area, type, price, rentPrice);
+	}
+	
+	//3-1번
+	public int setEstate(String type, int price, int id) {
+		return estateDAO.updateEstate(type, price, id);
+	}
+	
+	//4-1 
+	public int ridEstate(int id) {
+		return estateDAO.deleteEstate(id);
+	}
 	
 }
