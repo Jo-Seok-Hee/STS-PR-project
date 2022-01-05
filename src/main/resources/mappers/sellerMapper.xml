@@ -25,5 +25,36 @@
  		
 
  	</insert>
+ 	
+ 	<select id="selectSeller" resultType="com.sucky.pr.p04.seller.model.Seller">
+ 		SELECT
+ 			`id`
+ 			, `nickname`
+ 			, `profileImageUrl`
+ 			, `temperature`
+ 			, `createdAt`
+ 			, `updatedAt`
+ 		FROM 
+ 			`seller`
+ 		WHERE 
+ 			`id` = #{id}
+ 	</select>
+ 	
+ 	<select id="selectLastSeller" resultType="com.sucky.pr.p04.seller.model.Seller">
+ 	
+ 		SELECT
+ 			`id`
+ 			, `nickname`
+ 			, `profileImageUrl`
+ 			, `temperature`
+ 			, `createdAt`
+ 			, `updatedAt`
+ 		FROM 
+ 			`seller`
+ 		ORDER BY `id` DESC
+ 		LIMIT 1
+ 	
+ 	
+ 	</select>
 
  </mapper>
